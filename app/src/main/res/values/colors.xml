@@ -13,4 +13,6 @@
     <color name="txtColor1">#03071E</color>
     <color name="txtColor2">#14213D</color>
     <color name="txtColor3">#F7F9F9</color>
+    <color name="txtColor4">#404040</color>
+    <color name="txtFieldColor1">#1A000000</color>
 </resources>

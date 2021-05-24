@@ -5,4 +5,11 @@
     <string name="appdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="register">Register</string>
     <string name="sign_in">Sign In</string>
+    <string name="hello">Hello!</string>
+    <string name="registerDesc">Register to get started</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>
