@@ -3,4 +3,6 @@
     <string name="apptitle">appTitle</string>
     <string name="go_fit">Go-Fit</string>
     <string name="appdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
 </resources>
