@@ -90,4 +90,110 @@
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintTop_toBottomOf="@id/textWelcomeBack" />
 
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/field_txt_rounded"
+        android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:padding="14dp"
+        android:hint="@string/username"
+        android:textAlignment="textStart"
+        android:textColor="@color/txtColor1"
+        android:textColorHint="@color/txtFieldColor1"
+        android:textSize="18sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/textYouMissed" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/field_txt_rounded"
+        android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/txtColor1"
+        android:textColorHint="@color/txtFieldColor1"
+        android:textSize="18sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textForgotPassword"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/editTextUsername" />
+
+    <TextView
+        android:id="@+id/textForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="153dp"
+        android:text="@string/forgot_password"
+        app:layout_constraintBottom_toTopOf="@+id/dontHaveAccount"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+    <TextView
+        android:id="@+id/dontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/dont_have_an_account"
+        android:textAlignment="center"
+        android:textColor="@color/txtColor4"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintEnd_toStartOf="@id/signInTxt"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@id/textForgotPassword" />
+
+    <TextView
+        android:id="@+id/signInTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="153dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/sign_in"
+        android:textColor="@color/txtColor1"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintStart_toEndOf="@id/dontHaveAccount"
+        app:layout_constraintTop_toBottomOf="@id/textForgotPassword" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/btnColor1"
+        android:fontFamily="@font/roboto_medium"
+        android:insetBottom="0dp"
+        android:text="@string/register"
+        android:textColor="@color/txtColor3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:cornerRadius="10dp"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/signInTxt" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
