@@ -154,7 +154,7 @@
         android:fontFamily="@font/roboto_medium"
         android:hint="@string/tanggal_lahir"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="date|datetime"
         android:padding="14dp"
         android:textAlignment="textStart"
         android:textColor="@color/txtColor1"

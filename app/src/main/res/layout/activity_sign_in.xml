@@ -140,6 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="153dp"
         android:text="@string/forgot_password"
+        android:textColor="#4CAF50"
         app:layout_constraintBottom_toTopOf="@+id/dontHaveAccount"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
@@ -155,36 +156,36 @@
         android:textColor="@color/txtColor4"
         android:textSize="14sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
-        app:layout_constraintEnd_toStartOf="@id/signInTxt"
+        app:layout_constraintBottom_toTopOf="@+id/signinBtn"
+        app:layout_constraintEnd_toStartOf="@id/RegisterTXT"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
         app:layout_constraintTop_toBottomOf="@id/textForgotPassword" />
 
     <TextView
-        android:id="@+id/signInTxt"
+        android:id="@+id/RegisterTXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="153dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/sign_in"
+        android:text="@string/register"
         android:textColor="@color/txtColor1"
         android:textSize="14sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintBottom_toTopOf="@+id/signinBtn"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toEndOf="@id/dontHaveAccount"
         app:layout_constraintTop_toBottomOf="@id/textForgotPassword" />
 
     <Button
-        android:id="@+id/registerBtn"
+        android:id="@+id/signinBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/btnColor1"
         android:fontFamily="@font/roboto_medium"
         android:insetBottom="0dp"
-        android:text="@string/register"
+        android:text="@string/sign_in"
         android:textColor="@color/txtColor3"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -194,6 +195,6 @@
         app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        app:layout_constraintTop_toBottomOf="@+id/signInTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/RegisterTXT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
