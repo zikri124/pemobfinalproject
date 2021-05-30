@@ -10,7 +10,7 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="tanggal_lahir">Tanggal Lahir (DD/MM/YY)</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="lets_sign_you_in">Let`s sign you in.</string>
     <string name="welcome_back">Welcome Back.</string>
