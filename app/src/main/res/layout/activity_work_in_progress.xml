@@ -156,9 +156,10 @@
         android:layout_width="49dp"
         android:layout_height="49dp"
         android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/leftGuideline"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
         app:srcCompat="@drawable/back_icon"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:ignore="VectorDrawableCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
