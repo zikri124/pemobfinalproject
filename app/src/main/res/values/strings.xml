@@ -17,4 +17,7 @@
     <string name="you_ve_been_missed">You`ve been missed!</string>
     <string name="dont_have_an_account">don`t have an account</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="hello_user">Hello User!</string>
+    <string name="greeting">Are You Feeling Well Today?</string>
+    <string name="search">search</string>
 </resources>
