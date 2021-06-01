@@ -91,17 +91,17 @@
         app:layout_constraintTop_toBottomOf="@id/textWelcomeBack" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/editTextEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="78dp"
         android:background="@drawable/field_txt_rounded"
         android:ems="10"
         android:fontFamily="@font/roboto_medium"
+        android:hint="@string/email"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:padding="14dp"
-        android:hint="@string/username"
         android:textAlignment="textStart"
         android:textColor="@color/txtColor1"
         android:textColorHint="@color/txtFieldColor1"
@@ -132,7 +132,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textForgotPassword"
         app:layout_constraintEnd_toEndOf="@id/rightGuideline"
         app:layout_constraintStart_toStartOf="@id/leftGuideline"
-        app:layout_constraintTop_toBottomOf="@id/editTextUsername" />
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
 
     <TextView
         android:id="@+id/textForgotPassword"

@@ -1,9 +1,11 @@
 package com.example.pemobfinalproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,11 +13,17 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class signIn extends AppCompatActivity {
     ImageButton SignBack;
-    EditText SignUsername,SignPassword;
+    EditText SignEmail,SignPassword;
     TextView SignRegister;
     Button SignIns;
+    FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +31,16 @@ public class signIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         SignBack = findViewById(R.id.backBtn);
-        SignUsername = findViewById(R.id.editTextUsername);
+        SignEmail = findViewById(R.id.editTextEmail);
         SignPassword =findViewById(R.id.editTextPassword);
         SignRegister = findViewById(R.id.RegisterTXT);
         SignIns = findViewById(R.id.signinBtn);
+        fAuth = FirebaseAuth.getInstance();
+
+        if (fAuth.getCurrentUser()!= null){
+            startActivity(new Intent(getApplicationContext(),mainMenu.class));
+            finish();
+        }
 
         SignBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,13 +59,30 @@ public class signIn extends AppCompatActivity {
         SignIns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String Email = SignEmail.getText().toString().trim();
+                String Password = SignPassword.getText().toString().trim();
 
-                if (false){
-                    // The Database Connection hasn't been connected this is just a basic layout
-                    Toast.makeText(getApplicationContext(),"Username atau Password Salah!",Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(Email)){
+                    SignEmail.setError("Username cannot be empty!");
+                    return;
                 }
-                else
-                startActivity(new Intent(signIn.this, mainMenu.class));
+                if (TextUtils.isEmpty(Password)){
+                    SignPassword.setError("Password cannot be empty!");
+                }
+
+                fAuth.signInWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull  Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(signIn.this,"User Logged In",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),mainMenu.class));
+                        }
+                        else
+                            Toast.makeText(signIn.this, "Error " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
             }
         });
     }
