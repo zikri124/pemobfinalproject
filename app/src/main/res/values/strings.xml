@@ -20,4 +20,9 @@
     <string name="hello_user">Hello User!</string>
     <string name="greeting">Are You Feeling Well Today?</string>
     <string name="search">search</string>
+    <string name="covid">Covid</string>
+    <string name="checkup">Checkup</string>
+    <string name="medicine">Medicine</string>
+    <string name="more">More</string>
+    <string name="our_service">Our Service</string>
 </resources>

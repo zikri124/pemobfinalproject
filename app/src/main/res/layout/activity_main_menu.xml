@@ -73,162 +73,11 @@
             app:layout_constraintTop_toBottomOf="@id/textHelloUser" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Service"
-            android:layout_width="357dp"
-            android:layout_height="114dp"
-            android:layout_marginStart="12dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_bar">
-
-            <TextView
-                android:id="@+id/TVCovid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Covid"
-                android:textColor="#090909"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rectangleCovid" />
-
-            <TextView
-                android:id="@+id/TVDoctor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="More"
-                android:textColor="#090909"
-                app:layout_constraintStart_toEndOf="@+id/TVMedicine"
-                app:layout_constraintTop_toBottomOf="@+id/rectangleOther" />
-
-            <TextView
-                android:id="@+id/TVCheckup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="46dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Checkup"
-                android:textColor="#090909"
-                app:layout_constraintStart_toEndOf="@+id/TVCovid"
-                app:layout_constraintTop_toBottomOf="@+id/rectangleCheckUp" />
-
-            <TextView
-                android:id="@+id/TVMedicine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Medicine"
-                android:textColor="#090909"
-                app:layout_constraintStart_toEndOf="@+id/TVCheckup"
-                app:layout_constraintTop_toBottomOf="@+id/rectangleMedicine" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Our Service"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/rectangleCovid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:srcCompat="@drawable/rectangle" />
-
-            <ImageView
-                android:id="@+id/rectangleCheckUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toEndOf="@+id/rectangleCovid"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:srcCompat="@drawable/rectangle" />
-
-            <ImageView
-                android:id="@+id/rectangleMedicine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toEndOf="@+id/rectangleCheckUp"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:srcCompat="@drawable/rectangle" />
-
-            <ImageView
-                android:id="@+id/rectangleOther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toEndOf="@+id/rectangleMedicine"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:srcCompat="@drawable/rectangle" />
-
-            <ImageView
-                android:id="@+id/VirusPic"
-                android:layout_width="38.4dp"
-                android:layout_height="38.4dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                app:layout_constraintStart_toStartOf="@+id/rectangleCovid"
-                app:layout_constraintTop_toTopOf="@+id/rectangleCovid"
-                app:srcCompat="@drawable/virus" />
-
-            <ImageView
-                android:id="@+id/Checkup"
-                android:layout_width="38.4dp"
-                android:layout_height="38.4dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                app:layout_constraintStart_toStartOf="@+id/rectangleCheckUp"
-                app:layout_constraintTop_toTopOf="@+id/rectangleCheckUp"
-                app:srcCompat="@drawable/medical_checkup" />
-
-            <ImageView
-                android:id="@+id/Medicine"
-                android:layout_width="38.4dp"
-                android:layout_height="38.4dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                app:layout_constraintStart_toStartOf="@+id/rectangleMedicine"
-                app:layout_constraintTop_toTopOf="@+id/rectangleMedicine"
-                app:srcCompat="@drawable/medicine" />
-
-            <ImageView
-                android:id="@+id/docotr"
-                android:layout_width="38.4dp"
-                android:layout_height="38.4dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                app:layout_constraintStart_toStartOf="@+id/rectangleOther"
-                app:layout_constraintTop_toTopOf="@+id/rectangleOther"
-                app:srcCompat="@drawable/more" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/search_bar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/Service"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@id/textGreeting">
@@ -283,9 +132,126 @@
                     android:layout_height="18dp"
                     android:layout_marginRight="56dp"
                     android:src="@drawable/search_icon" />
-
-
             </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Service"
+            android:layout_width="0dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/search_bar">
+
+            <TextView
+                android:id="@+id/textViewService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/our_service"
+                android:textColor="@color/txtColor1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/allService"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <GridLayout
+                android:id="@+id/allService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:useDefaultMargins="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewService">
+
+
+                <ImageView
+                    android:id="@+id/covidPic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/virus" />
+
+                <TextView
+                    android:id="@+id/tvCovid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/covid"
+                    android:textColor="@color/txtColor2" />
+
+                <ImageView
+                    android:id="@+id/checkupPic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/medical_checkup" />
+
+                <TextView
+                    android:id="@+id/tvCheckup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/checkup"
+                    android:textColor="@color/txtColor2" />
+
+                <ImageView
+                    android:id="@+id/Medicine"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/medicine" />
+
+                <TextView
+                    android:id="@+id/TVMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/medicine"
+                    android:textColor="@color/txtColor2" />
+
+                <ImageView
+                    android:id="@+id/doctor"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:layout_gravity="center"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/TVDoctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="3"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/more"
+                    android:textColor="@color/txtColor2" />
+
+            </GridLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
