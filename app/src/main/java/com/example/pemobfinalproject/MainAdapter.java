@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,16 +16,19 @@ import java.util.ArrayList;
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     ArrayList<MainModel> mainModels;
     Context context;
+    RecyclerViewClickListener listener;
 
-    public MainAdapter (Context context, ArrayList<MainModel> mainModels) {
+    public MainAdapter (Context context, ArrayList<MainModel> mainModels, RecyclerViewClickListener listener) {
         this.context = context;
         this.mainModels = mainModels;
+        this.listener = listener;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         //Initialize Variable
         ImageView imageView;
         TextView textView;
+        LinearLayout item;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -32,6 +36,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             //Assign variable
             imageView = itemView.findViewById(R.id.imageView2);
             textView = itemView.findViewById(R.id.txtView);
+
+            item = itemView.findViewById(R.id.item);
+
+            item.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            listener.onClick(view, getAbsoluteAdapterPosition());
         }
     }
 
@@ -56,4 +69,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public int getItemCount() {
         return mainModels.size();
     }
+
+    public interface RecyclerViewClickListener {
+        void onClick(View view, int position);
+    }
+
+
 }

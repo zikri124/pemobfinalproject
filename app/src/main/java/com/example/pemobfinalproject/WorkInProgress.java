@@ -1,11 +1,11 @@
 package com.example.pemobfinalproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class WorkInProgress extends AppCompatActivity {
     ImageButton WIPBack;
@@ -20,6 +20,7 @@ public class WorkInProgress extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WorkInProgress.this, mainMenu.class));
+                finishAffinity();
             }
         });
     }

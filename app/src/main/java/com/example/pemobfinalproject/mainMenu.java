@@ -1,15 +1,14 @@
 package com.example.pemobfinalproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -21,6 +20,8 @@ public class mainMenu extends AppCompatActivity {
     MainAdapter mainAdapter;
 
     ImageView kotakCovid,kotakCheckup,kotakMedicine,kotakOther;
+
+    MainAdapter.RecyclerViewClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,8 @@ public class mainMenu extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //Initialize MainAdapter
-        mainAdapter = new MainAdapter(mainMenu.this, mainModels);
+        setOnClickListener();
+        mainAdapter = new MainAdapter(mainMenu.this, mainModels, listener);
 
         //Set MainAdapter to RecyclerView
         recyclerView.setAdapter(mainAdapter);
@@ -84,5 +86,18 @@ public class mainMenu extends AppCompatActivity {
                 startActivity(new Intent(mainMenu.this, WorkInProgress.class));
             }
         });*/
+    }
+
+    private void setOnClickListener() {
+        listener = new MainAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                if(position == 1) {
+                    startActivity(new Intent(mainMenu.this, selectLoc.class));
+                } else {
+                    startActivity(new Intent(mainMenu.this, WorkInProgress.class));
+                }
+            }
+        };
     }
 }
