@@ -73,7 +73,7 @@ public class selectLoc extends AppCompatActivity implements OnMapReadyCallback, 
  @Override
  public void onMapReady(@NonNull final MapboxMap mapboxMap) {
   this.mapboxMap = mapboxMap;
-  mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
+  mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/astrocat/ckpo2s0sa01rx17mmnmulrgc9"), new Style.OnStyleLoaded() {
    @Override
    public void onStyleLoaded(@NonNull Style style) {
     enableLocationComponent(style);
@@ -170,9 +170,11 @@ public class selectLoc extends AppCompatActivity implements OnMapReadyCallback, 
     }
 
 // Create a Toast which displays the new location's coordinates
-    /*Toast.makeText(activity, String.format(activity.getString(R.string.new_location),
+    /*Toast.makeText(activity, String.format(
             String.valueOf(result.getLastLocation().getLatitude()), String.valueOf(result.getLastLocation().getLongitude())),
-            Toast.LENGTH_SHORT).show();*/
+            Toast.LENGTH_SHORT).show();
+    Log.d("loc", "lat: "+String.valueOf(result.getLastLocation().getLatitude())+" long: "+String.valueOf(result.getLastLocation().getLongitude()));
+     */
 
 // Pass the new location to the Maps SDK's LocationComponent
     if (activity.mapboxMap != null && result.getLastLocation() != null) {
