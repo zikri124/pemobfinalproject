@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pemobfinalproject">
+        <activity android:name=".bottomNavBar"></activity>
         <activity android:name=".Profile"></activity>
         <activity android:name=".selectLoc" />
         <activity android:name=".WorkInProgress" />
