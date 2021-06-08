@@ -27,4 +27,8 @@
     <string name="our_service">Our Service</string>
 
     <string name="mapbox_access_token">sk.eyJ1IjoiYXN0cm9jYXQiLCJhIjoiY2twbGRyeWw5MDRvdDJ2cnc0bWxwa3ltciJ9.qqTk_FgqFh4nUMnMjBc9nQ</string>
+    <string name="home">Home</string>
+    <string name="message">message</string>
+    <string name="history">history</string>
+    <string name="profile">profile</string>
 </resources>
