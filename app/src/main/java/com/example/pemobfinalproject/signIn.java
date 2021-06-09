@@ -75,7 +75,7 @@ public class signIn extends AppCompatActivity {
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                    // Close the dialog
                     }
                 });
 
