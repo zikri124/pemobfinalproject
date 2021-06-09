@@ -61,31 +61,6 @@ public class mainMenu extends AppCompatActivity {
 
         //Set MainAdapter to RecyclerView
         recyclerView.setAdapter(mainAdapter);
-
-        /*kotakCovid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakCheckup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakMedicine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakOther.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });*/
     }
 
     private void setOnClickListener() {
