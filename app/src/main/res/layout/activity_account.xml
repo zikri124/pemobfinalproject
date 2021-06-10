@@ -125,6 +125,7 @@
             android:layout_height="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:onClick="LOGOUT"
             android:src="@drawable/log_out" />
 
     </LinearLayout>
