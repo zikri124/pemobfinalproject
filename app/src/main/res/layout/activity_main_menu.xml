@@ -41,20 +41,38 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="1.0" />
 
-        <TextView
-            android:id="@+id/textHelloUser"
+        <LinearLayout
+            android:id="@+id/mainMenuHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/hello_user"
-            android:textColor="@color/txtColor1"
-            android:textSize="34sp"
-            android:typeface="normal"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/textGreeting"
-            app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
-            app:layout_constraintTop_toTopOf="@id/topGuideline" />
+            app:layout_constraintTop_toBottomOf="@id/topGuideline">
+
+            <TextView
+                android:id="@+id/textHelloUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/hello_user"
+                android:textColor="@color/txtColor1"
+                android:textSize="34sp"
+                android:typeface="normal" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/account"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/usernavbar" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textGreeting"
@@ -70,7 +88,7 @@
             app:layout_constraintBottom_toTopOf="@+id/search_bar"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@id/textHelloUser" />
+            app:layout_constraintTop_toBottomOf="@id/mainMenuHeader" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/search_bar"
@@ -141,6 +159,7 @@
             android:layout_width="0dp"
             android:layout_height="114dp"
             android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@id/newsSection"
             app:layout_constraintEnd_toEndOf="@id/rightGuideline"
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/search_bar">
@@ -168,6 +187,132 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textViewService" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newsSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+            app:layout_constraintStart_toStartOf="@id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@id/Service">
+
+            <TextView
+                android:id="@+id/News"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/news"
+                android:textAlignment="textStart"
+                android:textColor="@color/txtColor2"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/listNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/listNews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/News">
+
+                <LinearLayout
+                    android:id="@+id/dataNews1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/white_rounded_background2"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageNews1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/newsimage1" />
+
+                    <TextView
+                        android:id="@+id/imageNewsTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/covid_test_swab"
+                        android:textColor="@color/txtColor2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/imageNewsContent1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:maxEms="8"
+                        android:maxLines="2"
+                        android:text="@string/newsContent1"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/dataNews3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_rounded_background2"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageNews3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/newsimage1" />
+
+                    <TextView
+                        android:id="@+id/imageNewsTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/covid_test_swab"
+                        android:textColor="@color/txtColor2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/imageNewsContent3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:maxEms="8"
+                        android:maxLines="2"
+                        android:text="@string/newsContent1"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

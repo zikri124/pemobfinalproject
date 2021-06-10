@@ -19,15 +19,16 @@
         <activity android:name=".Profile" />
         <activity android:name=".selectLoc" />
         <activity android:name=".WorkInProgress" />
-        <activity android:name=".mainMenu" />
-        <activity android:name=".signIn" />
-        <activity android:name=".register" />
-        <activity android:name=".account" >
+        <activity android:name=".mainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".signIn" />
+        <activity android:name=".register" />
+        <activity android:name=".account" >
         </activity>
 
         <meta-data
