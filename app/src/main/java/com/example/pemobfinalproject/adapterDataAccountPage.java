@@ -39,7 +39,7 @@ public class adapterDataAccountPage extends RecyclerView.Adapter<adapterDataAcco
 
         Glide.with(holder.iconImage.getContext())
                 .load(listAccountPage.getIcon())
-                .apply(new RequestOptions().override(24,24))
+                .apply(new RequestOptions().override(48,48))
                 .into(holder.iconImage);
 
         holder.tvIconName.setText(listAccountPage.getListData());
