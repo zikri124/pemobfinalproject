@@ -68,7 +68,17 @@ public class selectLoc extends AppCompatActivity implements OnMapReadyCallback, 
 
   btnBack.setOnClickListener(this);
   btnNext.setOnClickListener(this);
+
+  btnNext.setOnClickListener(new View.OnClickListener() {
+   @Override
+   public void onClick(View v) {
+    Toast.makeText(selectLoc.this,"Your order has been placed", Toast.LENGTH_SHORT).show();
+    startActivity(new Intent(selectLoc.this, mainMenu.class));
+   }
+  });
  }
+
+
 
  @Override
  public void onMapReady(@NonNull final MapboxMap mapboxMap) {
