@@ -66,11 +66,13 @@
   android:layout_height="wrap_content"
   android:layout_marginTop="8dp"
   android:background="@drawable/field_txt_rounded"
-  android:editable="false"
+  android:drawableTint="#000000"
   android:ems="10"
   android:fontFamily="@font/roboto_medium"
   android:inputType="textPersonName"
   android:padding="14dp"
+  android:text="12/13/22"
+  android:textColor="#7A7A7A"
   app:layout_constraintEnd_toStartOf="@+id/guideline2"
   app:layout_constraintStart_toStartOf="@+id/guideline1"
   app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -87,43 +89,17 @@
   app:layout_constraintStart_toStartOf="@+id/guideline1"
   app:layout_constraintTop_toBottomOf="@+id/edit_loc" />
 
- <EditText
-  android:id="@+id/edit_date"
-  android:layout_width="0dp"
-  android:layout_height="wrap_content"
-  android:layout_marginTop="8dp"
-  android:background="@drawable/field_txt_rounded"
-  android:ems="10"
-  android:inputType="date"
-  android:padding="14dp"
-  app:layout_constraintEnd_toStartOf="@+id/guideline2"
-  app:layout_constraintStart_toStartOf="@+id/guideline1"
-  app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
  <TextView
   android:id="@+id/textView6"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
   android:layout_marginTop="16dp"
   android:fontFamily="@font/roboto_medium"
-  android:text="Vaccine Time"
+  android:text="Vaccine Session"
   android:textColor="@color/txtColor2"
   android:textSize="20sp"
   app:layout_constraintStart_toStartOf="@+id/guideline1"
-  app:layout_constraintTop_toBottomOf="@+id/edit_date" />
-
- <EditText
-  android:id="@+id/edit_time"
-  android:layout_width="0dp"
-  android:layout_height="wrap_content"
-  android:layout_marginTop="8dp"
-  android:background="@drawable/field_txt_rounded"
-  android:ems="10"
-  android:inputType="time"
-  android:padding="14dp"
-  app:layout_constraintEnd_toStartOf="@+id/guideline2"
-  app:layout_constraintStart_toStartOf="@+id/guideline1"
-  app:layout_constraintTop_toBottomOf="@+id/textView6" />
+  app:layout_constraintTop_toBottomOf="@+id/button_date" />
 
  <Button
   android:id="@+id/btn_confirm"
@@ -151,5 +127,42 @@
   app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
   app:layout_constraintEnd_toStartOf="@+id/guideline2"
   app:layout_constraintStart_toStartOf="@+id/guideline1" />
+
+ <Button
+  android:id="@+id/button_date"
+  android:layout_width="0dp"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="8dp"
+  android:backgroundTint="#E1E1E1"
+  android:fontFamily="@font/roboto_medium"
+  android:outlineProvider="none"
+  android:padding="14dp"
+  android:text="Select Date"
+  android:textAlignment="textStart"
+  android:textAllCaps="false"
+  android:textColor="@color/txtColor1"
+  android:textSize="18sp"
+  android:translationZ="0dp"
+  app:iconTint="@color/txtColor1"
+  app:layout_constraintEnd_toStartOf="@+id/guideline2"
+  app:layout_constraintStart_toStartOf="@+id/guideline1"
+  app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+ <LinearLayout
+  android:layout_width="0dp"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="8dp"
+  android:background="@drawable/field_txt_rounded"
+  android:orientation="vertical"
+  app:layout_constraintEnd_toStartOf="@+id/guideline2"
+  app:layout_constraintStart_toStartOf="@+id/guideline1"
+  app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+  <Spinner
+   android:id="@+id/spinner"
+   android:layout_width="match_parent"
+   android:layout_height="60dp"
+   android:layout_marginStart="10dp" />
+ </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
