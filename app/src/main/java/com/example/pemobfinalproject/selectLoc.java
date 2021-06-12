@@ -288,9 +288,11 @@ public class selectLoc extends AppCompatActivity implements PermissionsListener,
    startActivity(new Intent(selectLoc.this, mainMenu.class));
    finishAffinity();
   } else if (view.getId() == btnNext.getId()) {
-   startActivity(new Intent(selectLoc.this, selectTime.class));
+   Intent intent = new Intent(this, selectTime.class);
+   intent.putExtra("loc", hospitalSelect.getText().toString());
+   startActivity(intent);
   } else if (view.getId() == btnReset.getId()) {
-   hospitalSelect.clearListSelection();
+   hospitalSelect.setText("");
   }
  }
 }
