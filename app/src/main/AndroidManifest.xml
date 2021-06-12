@@ -4,6 +4,7 @@
 
  <uses-permission android:name="android.permission.INTERNET" />
  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+ <uses-permission android:name="android.permission.INTERNET" />
 
  <application
   android:allowBackup="true"
@@ -12,7 +13,8 @@
   android:roundIcon="@mipmap/ic_launcher_round"
   android:supportsRtl="true"
   android:theme="@style/Theme.Pemobfinalproject">
-  <activity android:name=".selectLoc"></activity>
+  <activity android:name=".selectTime"></activity>
+  <activity android:name=".selectLoc" />
   <activity android:name=".WorkInProgress" />
   <activity android:name=".mainMenu" />
   <activity android:name=".signIn" />
