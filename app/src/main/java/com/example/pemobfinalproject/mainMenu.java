@@ -48,7 +48,7 @@ public class mainMenu extends AppCompatActivity {
 
         //Create String Array
         String[] langName = {
-                "Covid", "CheckUp", "Medicine", "Pharmacy", "Doctor", "Hospital"
+                "Vaccine", "CheckUp", "Medicine", "Pharmacy", "Doctor", "Hospital"
         };
 
         //Initialize ArrayList
@@ -77,7 +77,7 @@ public class mainMenu extends AppCompatActivity {
         listener = new MainAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                if(position == 1) {
+                if(position == 0) {
                     startActivity(new Intent(mainMenu.this, selectLoc.class));
                 } else {
                     startActivity(new Intent(mainMenu.this, WorkInProgress.class));
