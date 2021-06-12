@@ -15,7 +15,6 @@
         <activity android:name=".landingPage" >
 
         </activity>
-        <activity android:name=".bottomNavBar" />
         <activity android:name=".Profile" />
         <activity android:name=".selectLoc" />
         <activity android:name=".WorkInProgress" />

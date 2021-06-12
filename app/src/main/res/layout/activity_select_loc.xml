@@ -91,20 +91,20 @@
   app:layout_constraintStart_toStartOf="parent" />
 
  <Button
-  android:id="@+id/button_next_loc"
-  android:layout_width="0dp"
-  android:layout_height="wrap_content"
-  android:layout_marginStart="16dp"
-  android:layout_marginEnd="16dp"
-  android:layout_marginBottom="16dp"
-  android:backgroundTint="@color/btnColor1"
-  android:fontFamily="@font/roboto_bold"
-  android:padding="14dp"
-  android:text="Next"
-  android:textSize="16sp"
-  app:cornerRadius="10dp"
-  app:layout_constraintBottom_toBottomOf="parent"
-  app:layout_constraintEnd_toEndOf="parent"
-  app:layout_constraintStart_toStartOf="parent" />
+     android:id="@+id/button_next_loc"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="16dp"
+     android:layout_marginEnd="16dp"
+     android:layout_marginBottom="16dp"
+     android:backgroundTint="@color/btnColor1"
+     android:fontFamily="@font/roboto_bold"
+     android:padding="14dp"
+     android:text="Finish"
+     android:textSize="16sp"
+     app:cornerRadius="10dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
