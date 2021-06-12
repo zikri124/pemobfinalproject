@@ -73,6 +73,4 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public interface RecyclerViewClickListener {
         void onClick(View view, int position);
     }
-
-
 }

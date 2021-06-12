@@ -18,6 +18,7 @@ public class mainMenu extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<MainModel> mainModels;
     MainAdapter mainAdapter;
+    ImageView accountlog;
 
     ImageView kotakCovid,kotakCheckup,kotakMedicine,kotakOther;
 
@@ -27,6 +28,15 @@ public class mainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        accountlog = findViewById(R.id.account);
+
+        accountlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mainMenu.this, Profile.class));
+            }
+        });
 
         //Assign Var
         recyclerView = findViewById(R.id.allService);
@@ -61,31 +71,6 @@ public class mainMenu extends AppCompatActivity {
 
         //Set MainAdapter to RecyclerView
         recyclerView.setAdapter(mainAdapter);
-
-        /*kotakCovid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakCheckup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakMedicine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });
-        kotakOther.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, WorkInProgress.class));
-            }
-        });*/
     }
 
     private void setOnClickListener() {

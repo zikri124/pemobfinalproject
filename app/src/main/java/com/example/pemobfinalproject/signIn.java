@@ -1,8 +1,10 @@
 package com.example.pemobfinalproject;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,14 +16,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.jetbrains.annotations.NotNull;
+
 public class signIn extends AppCompatActivity {
     ImageButton SignBack;
     EditText SignEmail,SignPassword;
-    TextView SignRegister;
+    TextView SignRegister,ForgotPassword;
     Button SignIns;
     FirebaseAuth fAuth;
 
@@ -35,6 +41,7 @@ public class signIn extends AppCompatActivity {
         SignPassword =findViewById(R.id.editTextPassword);
         SignRegister = findViewById(R.id.RegisterTXT);
         SignIns = findViewById(R.id.signinBtn);
+        ForgotPassword = findViewById(R.id.textForgotPassword);
         fAuth = FirebaseAuth.getInstance();
 
         if (fAuth.getCurrentUser()!= null){
@@ -53,6 +60,44 @@ public class signIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(signIn.this, register.class));
+            }
+        });
+
+        ForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText resetMail = new EditText(v.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                passwordResetDialog.setTitle("Did You Want To Reset Your Password?");
+                passwordResetDialog.setMessage("Enter Your Email To Receive Reset Link.");
+                passwordResetDialog.setView(resetMail);
+
+                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    // Close the dialog
+                    }
+                });
+
+                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String mail = resetMail.getText().toString();
+                        fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(signIn.this,"Please Check Your Email For Reset Link", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull @NotNull Exception e) {
+                                Toast.makeText(signIn.this,"Error Has Occured Please Try Again Later", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+
+                passwordResetDialog.create().show();
             }
         });
 

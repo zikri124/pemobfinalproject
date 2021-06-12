@@ -79,6 +79,8 @@ public class selectLoc extends AppCompatActivity implements PermissionsListener,
   getJsonData();
  }
 
+
+
  @Override
  public void onMapReady(@NonNull final MapboxMap mapboxMap) {
   this.mapboxMap = mapboxMap;

@@ -16,7 +16,6 @@ public class landingPage extends AppCompatActivity {
         setContentView(R.layout.landing_page);
         LPRegister = findViewById(R.id.registerBtn);
         LPLogin = findViewById(R.id.signInBtn);
-        //halo aldi
 
         LPRegister.setOnClickListener(new View.OnClickListener() {
             @Override
