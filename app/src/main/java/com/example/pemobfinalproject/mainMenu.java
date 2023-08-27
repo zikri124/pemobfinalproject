@@ -34,7 +34,7 @@ public class mainMenu extends AppCompatActivity {
         accountlog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mainMenu.this, Profile.class));
+                startActivity(new Intent(mainMenu.this, account.class));
             }
         });
 
